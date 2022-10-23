@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Macdonardo",
+  "description": "",
+  "version": "1.0.0",
+  "host_permissions": [
+    "https://etk.srail.kr/"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/tada.mp3"
+      ],
+      "matches": [
+        "https://etk.srail.kr/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "css": [
+        "app/srt/srt.css"
+      ],
+      "js": [
+        "libs/jquery-3.6.0.min.js",
+        "app/srt/dom.js",
+        "app/srt/macro.js"
+      ],
+      "matches": [
+        "https://etk.srail.kr/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
