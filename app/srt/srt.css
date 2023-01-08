@@ -1,3 +1,12 @@
+.__macro_starter {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: #CD5C5C;
+    color: white;
+    font-size: 20px;
+}
+
 .__macro_target_seat {
-    background-color: red
+    background-color: #CD5C5C
 }

@@ -16,7 +16,7 @@ const helpers = (function () {
 
     return {
         createStarter(isRunning, handler) {
-            $('<a href="javascript:;">' + (isRunning ? '정지' : '시작') + '</a>').on("click", handler).appendTo(".quickmenu");
+            $('<a href="javascript:;" class="__macro_starter">' + (isRunning ? '정지' : '시작') + '</a>').on("click", handler).appendTo(".quickmenu");
         },
         createSelector(train, trainIdx) {
             this.obtainOpenSeats(train).forEach(seat => $(seat).append(checkbox(trainIdx + ":" + $(seat).index())));
